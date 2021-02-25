@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="templateResponsiveDesign.css"/>
+<style>
+/*mobile*/
+ @media only screen and (max-width:600px){
+ body{margin:0px;}
+ header,footer,button{ background-color: #a8a1a1; color: white;}
+ footer{position:fixed; bottom:0vw; padding:10px;   z-index: -1;}
+ nav{display:none;}
+ .icons{width:100%;}
+ #logo{position:relative; left: 45%;}
+ #title{position:relative; left: 43%; display:block;}
+ #mycontent{width: 100%; }
+ #myphoto {width:100%;}
+ #menu{ position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;}
+	nav{ background-color: #a8a1a1; }
+nav div{display:block; width:100%; padding:5px; }
+nav div:hover{background-color:#b2e5e5; color:Black; }
+ }
+
+ /*desktop*/
+ @media only screen and (min-width:600px){
+ header,footer, button{ background-color: #a8a1a1; color: white;}
+ footer{position:fixed; bottom:0vw; padding:10px;   z-index: -1;}
+nav{float:right; margin:5px; }
+nav div{float:left; margin:5px; width:16.6%; }
+nav div:hover{background-color:#b2e5e5 ; color:Black; }
+.icons{margin:5px;}
+body{margin:0px;}
+#menu{display:none;}
+}
+ 
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img class="col-1" id= "logo" src= "images/logo.png"/>
+<span class="col-3" id="title" style= "font-size:3vw;"> Responsive </span>
+<img class="col-1" id="menu" src="images/menu.svg" onclick="popup()" />
+<nav class="col-8" id= "mynav"> 
+<div style= "font-size:2vw;" ><center><b>Home</b></center></div>
+<div style= "font-size:2vw;"><center><b>About</b></center></div>
+<div style= "font-size:2vw;"><center><b>Features</b></center></div>
+<div style= "font-size:2vw;"><center><b>Work</b></center></div>
+<div style= "font-size:2vw;"><center><b>Contact us</b></center></div>
+</nav>
+
+</header>
+<div class = "row" >
+<div class = "col-12" style= "float:left; background-color: #b2e5e5; "> 
+<p id = "mycontent" class = "col-6" style= "float:left;" style= "font-size:2vw;">Mobile First vs. Desktop First<br/>
+If you want to do any internet based project, deciding to use either Mobile First approach or Desktop First approach is crucial. So today we will discuss about Mobile First vs. Desktop First. In the long run, you can save a lot of time and money by avoiding the approach mistakes from the beginning. If you want to carry out the project with assurance, first you need to consider what factor to be evaluate when deciding the option.
+
+There are two main strategies approach for a web based project; Mobile First and also Desktop First. Before deciding which approach is the most suitable for the project, we need to take into consideration at the various technical and business aspects. </br> <a href = "https://www.e-spincorp.com/mobile-first-vs-desktop-first/"> <button> read more </button></a></p> 
+
+<img class = "col-6" id="myphoto" style= "float:right;" src="images/photo.png" >
+</div>
+<div class = "col-6" style="margin:auto;"> 
+<div class = "col-4 icons" style="border:solid 1px; float:left; "> <img style="float:left; width:25%;" src="images/stat.svg"/> <p style="float:right" > write a content here</p></div>
+<div class = "col-4 icons" style="border:solid 1px; float:left; "><img style="float:left; width:25%;" src="images/setting.svg" /> <p style="float:right" > write a content here</p></div>
+<div class = "col-4 icons"style="border:solid 1px; float:left;"><img style="float:left; width:25%;" src="images/phone.svg" /> <p style="float:right"> write a content here</p></div>
+<div class = "col-4 icons" style="border:solid 1px; float:left;"><img style="float:left; width:25%;" src="images/coun.svg" > <p style="float:right" > write a content here</p></div>
+</center>
+</div>
+<footer class= "col-12">@Alaa Mohamed</footer> 
+</body> 
+<script>
+var mynav = document.getElementById("mynav");
+var clicked = true;
+function popup(){
+if (clicked == true){
+mynav.style= "display:block; width:25%; position:absolute; right:0; "
+clicked = false;
+}
+else if (clicked == false){ 
+mynav.style="dispaly:none;" 
+clicked = true;
+}
+}
+</script>
+</html>
